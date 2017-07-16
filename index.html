@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<!-- Copyright 2016 Matias Fuentes, all rights reserver -->
+<head>
+	<title> Angry Pigs Editor </title>
+	<meta name="APE" content="Editor For Angry Pigs" charset="utf-8">
+
+	<!-- CSS styles for the 'APE' -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barrio|Open+Sans:300,400,700">
+	<script type="text/javascript" src="js/Box2DWeb-2.1.a.3.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+</head>
+<body>
+	<nav id="editor-nav">
+		<p>
+			<span class="ion-settings"></span>
+				Angry Pigs Editor
+			<span class="ion-android-settings"></span>
+		</p>
+		<ul>
+			<li id="new-btn" class="nav-li"> New  </li>
+			<li id="save-btn" class="nav-li"> Save </li>
+			<li id="load-btn" class="nav-li"> Load </li>
+		</ul>
+	</nav>
+	<div id="game-lose">
+		<p>
+			<span class="ion-sad-outline"></span>
+			YOU LOSE
+			<span class="ion-sad-outline"></span>
+		</p>	
+		<p>
+		 THANK YOU FOR PLAYING 
+		</p>
+		<span class="ion-thumbsdown icon-trophy"></span> 
+	</div>
+	
+	<div id="game-win">
+			<span class="ion-ribbon-b icon-trophy"></span>
+			YOU WIN
+			<span class="ion-ribbon-b icon-trophy"></span>
+		<div id="game-score"></div>
+		<p>
+			THANK YOU FOR PLAYING
+		</p>
+		<span class="ion-trophy icon-trophy"></span> 
+	</div>
+	
+	<div id="editor-save">
+		Level Name
+		<input class="item-form" id="level-name" type="text" name="Name"/>
+		Author
+		<input class="item-form" id="level-author" type="text" name="Author"/>
+		<div id="save-level-btn"> Save Level </div>
+		<span class="ion-android-cancel cancel-btn"></span>
+	</div>
+
+	<div id="editor-load">		
+		<select id="load-select"></select>
+		<div id="load-level-btn"> Load Level </div>	
+		<span class="ion-android-cancel cancel-btn"></span>
+	</div>
+
+	<div id="editor-left" class="editor-content">
+		<p>
+		<span class="ion-cube"></span>
+			ITEMS
+			<span class="ion-cube"></span>
+		</p>
+		<ul>
+			<li class="item item-cannon"><span class="item item-cannon-top"></span></li>
+			<li class="item item-box"></li>
+			<li class="item item-bird"></li>
+			<li class="item-cannonball"></li>
+			<li id="background-li"> Background
+				<select id="background-select">
+                    <option selected="selected" value="url(img/gameBackground.png)"> Sunny </option>
+                    <option value="url(img/gameBackground-1.png)"> Field </option>
+                    <option value="url(img/gameBackground-2.png)"> Jungle </option>
+                    <option value="url(img/gameBackground-3.png)"> Snow </option>
+				</select>
+			</li>
+		</ul>
+	</div>
+
+	<div id="game-cannonballs"></div>
+	<div id="editor-game" class="editor-content" value="">
+		
+		<div id="editor-floor"></div>
+	</div>
+
+	<div id="editor-right" class="editor-content">
+		<p>
+			INSPECTOR
+			<span class="ion-ios-gear"></span>
+		</p>
+		<span id="item-name"> Item Name </span>
+		<div>
+			Projectiles
+			<input class="item-form" id="item-projectiles" type="text" name="Projectiles" value="5"/>
+		</div>
+		<ul id="ul-form">
+			<li id="li-height">
+				Height
+				<input class="item-form" id="item-height" type="text" name="Height" value="150"/>
+			</li>
+			<li>
+				Width
+				<input class="item-form" id="item-width" type="text" name="Width" value="150"/>
+			</li>
+			<li>
+				Mass
+				<input class="item-form" id="item-mass" type="text" name="Mass" value="30"/>
+			</li>
+			<li>
+				Friction
+				<input class="item-form" id="item-friction" type="text" name="Friction" value="5"/>
+			</li>
+			<li>
+				Bounce
+				<input class="item-form" id="item-bounce" type="text" name="Bounce" value="5"/>
+			</li>
+			
+			<li>
+				Material
+				<select id="texture-select">
+				  <option selected="selected" value="url(img/box.png)">WOOD</option>
+				  <option value="url(img/box-stone.png)">STONE</option>
+				  <option value="url(img/box-metal.png)">METAL</option>
+				</select>
+			</li>
+		</ul>
+		<div id="apply-btn"> Apply </div>
+	</div>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/App.js"></script>
+    	<script type="text/javascript" src="js/Navigation.js"></script>
+    	<script type="text/javascript" src="js/Editor.js"></script>
+    	
+    	<script type="text/javascript" src="js/Physics.js"></script>
+    	<script type="text/javascript" src="js/WorldController.js"></script>
+    	<script type="text/javascript" src="js/Entity.js"></script>
+    	<script type="text/javascript" src="js/Game.js"></script>	
+</body>
+</html>

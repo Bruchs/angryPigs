@@ -1,0 +1,280 @@
+body
+{
+	background-image: url("../img/background.png");
+	background-size: 100%;
+    background-repeat: repeat-y;
+    font-family: 'Barrio', cursive;
+    margin: 0px;
+    color: white;
+}
+
+ul{list-style: none; margin: 0px; padding: 0px;}
+
+#editor-nav
+{
+	text-align: center;
+}
+
+#editor-nav p
+{
+	font-size: 55px;
+	margin: 0px;
+	padding: 0.15% 0%;
+	background-color: rgba(0,0,0,0.5);
+	text-shadow: 0px 3px 0px rgba(150, 150, 150, 1);
+}
+
+#editor-nav ul
+{
+	padding: 0.25% 0%;
+	background-color: orange;
+}
+
+#editor-nav li, #apply-btn, #save-level-btn, #load-level-btn
+{
+	padding: 0.5% 2%;
+	display: inline-block;
+	background-color: orange;
+	border: 4px solid rgba(0,0,0,0.25);
+	border-radius: 100px;
+	font-size: 25px;
+	text-shadow: 0px 3px 0px rgba(150, 150, 150, 1);
+	transition: 0.5s;
+}
+
+#apply-btn, #save-level-btn, #load-level-btn
+{
+	margin-top: 10%;
+	margin-bottom: 10%;
+	width: 80%;
+}
+
+#editor-nav li:hover, #apply-btn:hover, #save-level-btn:hover, #load-level-btn:hover
+{
+	padding: 0.7% 2.5%;
+	background-color: #FF6600;
+	cursor: pointer;
+}
+
+.editor-content
+{
+	display: inline-block;
+}
+
+#editor-left, #editor-right, #editor-background, #editor-save, #editor-load
+{
+	width: 15%;
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#editor-left p, #editor-right p
+{
+	font-size: 35px;
+	background-color: orange;
+	text-shadow: 0px 3px 0px rgba(150, 150, 150, 1);
+}
+
+#editor-save, #editor-load, #game-win, #game-lose
+{		
+	left: 0;
+	right: 0;
+	z-index: 100;
+	display: none;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	padding: 2.5% 2.5%;
+	border-radius: 2.5px;
+	border: 10px solid orange;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+#game-win, #game-lose
+{
+	text-align: center; 
+	font-size: 120px;
+	background-color: rgba(0, 0, 0, 0.95);
+	text-shadow: 0px 6px 0px rgba(150, 150, 150, 1);
+	padding: 5%;
+}
+
+.icon-trophy{color: #FFA500; text-shadow: 0px 3px 0px yellow; font-size: 160px;}
+
+.cancel-btn{width: 100%; font-size: 45px; color: white;text-shadow: 0px 3px 0px rgba(150, 150, 150, 1); transition: 0.3s}
+
+.cancel-btn:hover{color: #FF6600; cursor: pointer; font-size: 50px;}
+
+#editor-left
+{
+	float: left;
+	border-radius: 2.5px;
+	border-bottom: 10px solid orange;
+	border-right: 10px solid orange;
+	text-align: center;
+}
+
+#background-li
+{
+	margin-top: 15%;
+	border-top: 10px solid orange;
+	padding: 5% 0%;
+}
+
+#editor-game
+{
+	width: 64%;
+	height: 900px;
+	margin: 1% 1.5%;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 10px solid orange;
+	background-image: url(../img/gameBackground.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#editor-right
+{
+	float: right;
+	border-radius: 2.5px;
+	padding-bottom: 1%;
+	border-bottom: 10px solid orange;
+	border-left: 10px solid orange;
+	text-align: center;
+}
+
+.item
+{
+	width: 110%;
+	height: 110px;
+	transition: 0.5s;
+	margin-bottom: 5%;
+	list-style: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#item-name
+{
+	font-size: 50px;
+	text-shadow: 0px 3px 0px orange;
+}
+
+.draggable
+{
+	transition: 0s;
+	width: 140px;
+	height: 140px;
+	position: absolute;
+	margin: 0px 5%;
+}
+
+.draggable-item
+{
+	background-size: contain;
+	background-repeat: round;
+	position: absolute;
+}
+
+.item:hover{
+	height: 140px;
+}
+
+#game-cannon, .bird-anim
+{
+	width: 200px;
+	height: 200px;
+	list-style: none;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.bird-anim
+{
+	width: 100px;
+	height: 100px;
+}
+
+.item-cannon{background-image: url("../img/cannon-base.png"); }
+
+.item-cannon-top
+{
+	background-image: url("../img/cannon-top.png");
+	width: 100px;
+	height: 100px;
+	top: 200px;
+	position: absolute;
+}
+
+#game-cannonballs
+{
+	font-size: 55px;
+	margin: 0px;
+	padding-right: 7%;
+	text-align: right;
+	display: none;
+	text-shadow: 0px 3px 0px rgba(150, 150, 150, 1);
+	background-image: url("../img/cannonball.png"); position: absolute; width: 100px;
+	height: 100px; background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0px;
+	list-style: none;
+}
+
+.item-cannonball
+{
+	background-image: url("../img/cannonball.png"); position: absolute; width: 80px;
+	height: 80px; background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	display: none;
+}
+
+.item-box{background-image: url("../img/box.png");}
+
+.item-bird{background-image: url("../img/bird.png");}
+
+.bird-anim {animation: fly 0.3s infinite;}
+
+@keyframes fly {
+  0% {background-image: url("../img/bird.png");}
+  25% {background-image: url("../img/bird-1.png");}
+  50% {background-image: url("../img/bird-2.png");}
+  75% {background-image: url("../img/bird-3.png");}
+}
+.item-form, #texture-select, #background-select, #load-select
+{
+	width: 80%;
+	margin: 2.5%;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	border-radius: 10px;
+	border: 5px solid orange;
+	font-family:  'Barrio', cursive;
+	background-color: rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+
+.item-form:focus
+{
+	color: orange;
+	font-size: 30px;
+	text-shadow: 0px 1.5px 0px rgba(150, 150, 150, 1);
+	border: 7px solid orange;
+}
+
+#load-select
+{
+	font-size: 15px;
+}
